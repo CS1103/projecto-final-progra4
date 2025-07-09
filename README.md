@@ -129,18 +129,18 @@
 * **Métricas de ejemplo (entrenamiento por defecto**:
 
   * Iteraciones: 15 épocas.
-  * Tiempo total de entrenamiento: 10s169ms.
+  * Tiempo total de entrenamiento:  2s289ms
   * Presisión total: 50%.
 
 * **Métricas de ejemplo (entrenamiento personalizado 1**:
   * IParámetros de la red neuronal: por defecto.
   * Iteraciones: 30 épocas.
-  * Tiempo total de entrenamiento: 28s163ms.
-  * Presisión total: 66%
+  * Tiempo total de entrenamiento: 4s529ms.
+  * Presisión total: 83.33333%
 * **Métricas de ejemplo (entrenamiento personalizado 2**:
   * IParámetros de la red neuronal: por defecto.
   * Iteraciones: 60 épocas.
-  * Tiempo total de entrenamiento: 10s169ms.
+  * Tiempo total de entrenamiento: 9s091ms.
   * Presisión total: 91.6667%.
 * **Ventajas/Desventajas**:
 

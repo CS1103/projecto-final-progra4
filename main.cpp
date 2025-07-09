@@ -67,13 +67,12 @@ void trainWithDefaultParams() {
     std::cout << "- Tamano de lote: 32\n";
 
     auto [X_train, Y_train] = generate_data(1000);
-    auto [X_test, Y_test] = generate_data(1000);
+
 
     //Normalización
     X_train *= (1.0f / 99.0f);
     Y_train *= (1.0f / 198.0f);
-    X_test *= (1.0f / 99.0f);
-    Y_test *= (1.0f / 198.0f);
+
 
     NeuralNetwork<float> nn;
     nn.add_layer(std::make_unique<Dense<float>>(2, 64));
@@ -177,13 +176,12 @@ void trainWithCustomParams() {
     std::cout << "Neuronas capa 3: " << layer3_size << "\n";
 
     auto [X_train, Y_train] = generate_data(1000);
-    auto [X_test, Y_test] = generate_data(1000);
+
 
     // Normalización para 0-99
     X_train *= (1.0f / 99.0f);
     Y_train *= (1.0f / 198.0f);
-    X_test *= (1.0f / 99.0f);
-    Y_test *= (1.0f / 198.0f);
+
 
     NeuralNetwork<float> nn;
     nn.add_layer(std::make_unique<Dense<float>>(2, layer1_size));
