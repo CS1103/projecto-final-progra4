@@ -197,6 +197,14 @@ En este proyecto se implementa un MLP, dado que es la arquitectura más adecuada
 > [1] E. B. S. Martín, F. Sáez-Delgado, y N. Lepe-Martínez, "El rol predictivo de la red neuronal por defecto sobre la atención sostenida en edades escolares: una revisión sistemática," Revista chilena de neuro-psiquiatría, vol. 61, no. 1, pp. 87-97, 2023.
 > 
 > [1] M. Cilimkovic, "Neural networks and back propagation algorithm," Institute of Technology Blanchardstown, vol. 15, no. 1, p. 18, 2015.
+>
+> Aprende Machine Learning. (s.f.). Breve historia de las redes neuronales artificiales. Recuperado de https://www.aprendemachinelearning.com/breve-historia-de-las-redes-neuronales-artificiales/
+>
+> Codewave. (s.f.). Development of Neural Networks: A Short History. Recuperado de https://codewave.com/insights/development-of-neural-networks-history/
+>
+> Elsevier. (s.f.). Training Algorithm - Computer Science. ScienceDirect Topics. Recuperado de https://www.sciencedirect.com/topics/computer-science/training-algorithm
+>
+> Zhang, J., & Wang, J. (2008). Training feedforward neural networks: a comparative study. Expert Systems with Applications, 34(2), 135–139. https://doi.org/10.1016/j.eswa.2006.09.004
 ---
 
 ### Licencia
