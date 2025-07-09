@@ -4,7 +4,7 @@
 
 ### **Descripción**
 
-> Implementación de una red neuronal para deducir el resultado de  la Suma de 2 números con 3 dígitos.
+> Implementación de una red neuronal para deducir el resultado de  la Suma de 2 números con 2 dígitos.
 
 ### Contenidos
 
@@ -186,6 +186,7 @@
 ### 7. Bibliografía
 
 > [1] E. B. S. Martín, F. Sáez-Delgado, y N. Lepe-Martínez, "El rol predictivo de la red neuronal por defecto sobre la atención sostenida en edades escolares: una revisión sistemática," Revista chilena de neuro-psiquiatría, vol. 61, no. 1, pp. 87-97, 2023.
+> 
 > [1] M. Cilimkovic, "Neural networks and back propagation algorithm," Institute of Technology Blanchardstown, vol. 15, no. 1, p. 18, 2015.
 ---
 
