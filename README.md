@@ -58,11 +58,20 @@
 ### 1. Investigación teórica
 
 * **Objetivo**: Explorar fundamentos y arquitecturas de redes neuronales.
-* **Contenido de ejemplo**:
-
+* **Contenido**:
   1. Historia y evolución de las NNs.
+El origen de las redes neuronales artificiales se remonta a la década de 1940, con el modelo de McCulloch y Pitts, que planteó una primera representación matemática simplificada de la neurona biológica. Durante los años 50 y 60, surgieron avances como los perceptrones de Rosenblatt, que demostraron la capacidad de aprender patrones básicos. Sin embargo, limitaciones en su capacidad de resolver problemas no lineales provocaron un período de menor interés. El desarrollo del algoritmo de retropropagación en los años 80 permitió el entrenamiento efectivo de redes multicapa, reactivando la investigación. Desde los 2000, la mejora de la capacidad de cómputo y el auge del deep learning han impulsado la adopción masiva de redes neuronales profundas en numerosos campos, incluyendo procesamiento de imágenes, lenguaje natural y predicciones numéricas.
+
   2. Principales arquitecturas: MLP, CNN, RNN.
+* Perceptrón Multicapa (MLP): Formado por varias capas de neuronas totalmente conectadas y funciones de activación no lineales. Se utiliza en tareas de clasificación y regresión sobre datos tabulares o vectoriales.
+* Redes Convolucionales (CNN): Incorporan operaciones de convolución y pooling para extraer características espaciales jerárquicas, principalmente en imágenes.
+* Redes Recurrentes (RNN): Añaden conexiones que modelan relaciones temporales en secuencias, siendo adecuadas para procesamiento de texto y series temporales.
+En este proyecto se implementa un MLP, dado que es la arquitectura más adecuada para aprender la relación numérica entre los dígitos de entrada y la suma esperada.}
+
   3. Algoritmos de entrenamiento: backpropagation, optimizadores.
+* El aprendizaje de una red neuronal consiste en ajustar los parámetros internos para reducir el error entre las salidas predichas y las reales. El método más habitual es la retropropagación del error (backpropagation), que calcula los gradientes de la función de pérdida respecto a cada peso. Posteriormente, se aplican algoritmos de optimización como:
+  * SGD (Stochastic Gradient Descent): Ajusta cada peso en función del gradiente y de una tasa de aprendizaje fija.
+  * Adam: Calcula tasas de aprendizaje adaptativas y momentums por parámetro, logrando una convergencia más rápida y estable en muchos casos.
 
 ---
 
