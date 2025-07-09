@@ -10,15 +10,14 @@ namespace utec::algebra {
 
 template <typename T, size_t Rank>
 class Tensor {
-private:
     std::vector<size_t> shape_;
     std::vector<T> data_;
 
 public:
-    // Constructor vacío
+    //Constructor vacío
     Tensor() = default;
 
-    // Constructor con dimensiones
+    //Constructor con dimensiones
     explicit Tensor(const std::vector<size_t>& shape) : shape_(shape) {
         if (shape.size() != Rank) {
             throw std::invalid_argument("Shape rank doesn't match tensor rank");
@@ -26,21 +25,21 @@ public:
         data_.resize(calculate_total_size());
     }
 
-    // Constructor para tensores 2D
+    //Constructor para tensores 2D
     Tensor(size_t dim1, size_t dim2) {
         static_assert(Rank == 2, "This constructor is only for 2D tensors");
         shape_ = {dim1, dim2};
         data_.resize(dim1 * dim2);
     }
 
-    // Constructor para tensores 1D
+    //Constructor para tensores 1D
     explicit Tensor(size_t dim1) {
         static_assert(Rank == 1, "This constructor is only for 1D tensors");
         shape_ = {dim1};
         data_.resize(dim1);
     }
 
-    // Métodos para manipulación de datos
+    //Métodos para manipulación de datos
     void fill(const T& value) {
         std::fill(data_.begin(), data_.end(), value);
     }
@@ -61,7 +60,7 @@ public:
         }
     }
 
-    // Acceso a elementos para tensores 1D
+    //Acceso a elementos para tensores 1D
     T& at(size_t i) {
         static_assert(Rank == 1, "This method is only for 1D tensors");
         return data_.at(i);
@@ -72,7 +71,7 @@ public:
         return data_.at(i);
     }
 
-    // Acceso a elementos para tensores 2D
+    //Acceso a elementos para tensores 2D
     T& at(size_t i, size_t j) {
         static_assert(Rank == 2, "This method is only for 2D tensors");
         return data_.at(i * shape_[1] + j);
@@ -83,7 +82,7 @@ public:
         return data_.at(i * shape_[1] + j);
     }
 
-    // Operaciones matemáticas
+    //Operaciones matemáticas
     Tensor& operator*=(const T& scalar) {
         for (auto& elem : data_) {
             elem *= scalar;
@@ -96,11 +95,11 @@ public:
         return result *= scalar;
     }
 
-    // Información de dimensiones
+    //Tamaño de dimensiones
     const std::vector<size_t>& shape() const { return shape_; }
     size_t size() const { return data_.size(); }
 
-    // Método slice para dividir el tensor
+    //Método slice para dividir el tensor
     Tensor slice(size_t start_row, size_t end_row) const {
         static_assert(Rank == 2, "Slice is only implemented for 2D tensors");
         size_t rows = end_row - start_row;

@@ -19,7 +19,7 @@ public:
         b = Tensor<T,1>(out_feats);
         db = Tensor<T,1>(out_feats);
 
-        // Inicialización Xavier/Glorot
+        //Inicialización
         T limit = sqrt(6.0 / (in_feats + out_feats));
         W.fill_random(-limit, limit);
         b.fill(0.0);
@@ -41,7 +41,6 @@ public:
     }
 
     Tensor<T,2> backward(const Tensor<T,2>& grad) override {
-        // Cálculo de gradientes
         for (size_t i = 0; i < W.shape()[0]; ++i) {
             for (size_t j = 0; j < W.shape()[1]; ++j) {
                 dW.at(i, j) = 0;
@@ -58,7 +57,7 @@ public:
             }
         }
 
-        // Gradiente respecto a la entrada
+        //Gradiente respecto a la entrada
         Tensor<T,2> input_grad(last_x.shape()[0], last_x.shape()[1]);
         for (size_t i = 0; i < input_grad.shape()[0]; ++i) {
             for (size_t j = 0; j < input_grad.shape()[1]; ++j) {

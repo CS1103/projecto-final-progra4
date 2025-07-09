@@ -56,7 +56,7 @@ public:
         t++;
         auto& [m, v] = m2_[&param];
 
-        // Initialize if empty
+        //Inicializacion
         if (m.shape().empty()) {
             m = Tensor<T,2>(param.shape()[0], param.shape()[1]);
             v = Tensor<T,2>(param.shape()[0], param.shape()[1]);
@@ -64,7 +64,7 @@ public:
             v.fill(0);
         }
 
-        // Update moments
+        //Actualizacion de moments
         for (size_t i = 0; i < param.shape()[0]; ++i) {
             for (size_t j = 0; j < param.shape()[1]; ++j) {
                 m.at(i, j) = beta1 * m.at(i, j) + (1 - beta1) * grad.at(i, j);
@@ -72,7 +72,7 @@ public:
             }
         }
 
-        // Bias correction
+        //Correccion de bias
         Tensor<T,2> m_hat(param.shape()[0], param.shape()[1]);
         Tensor<T,2> v_hat(param.shape()[0], param.shape()[1]);
 
@@ -92,7 +92,6 @@ public:
         t++;
         auto& [m, v] = m1_[&param];
 
-        // Initialize if empty
         if (m.shape().empty()) {
             m = Tensor<T,1>(param.shape()[0]);
             v = Tensor<T,1>(param.shape()[0]);
@@ -100,13 +99,13 @@ public:
             v.fill(0);
         }
 
-        // Update moments
+        //Actualizar moments
         for (size_t i = 0; i < param.shape()[0]; ++i) {
             m.at(i) = beta1 * m.at(i) + (1 - beta1) * grad.at(i);
             v.at(i) = beta2 * v.at(i) + (1 - beta2) * grad.at(i) * grad.at(i);
         }
 
-        // Bias correction
+        //Correccion de bias
         Tensor<T,1> m_hat(param.shape()[0]);
         Tensor<T,1> v_hat(param.shape()[0]);
 
