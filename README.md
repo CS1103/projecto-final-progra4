@@ -105,7 +105,7 @@ En este proyecto se implementa un MLP, dado que es la arquitectura más adecuada
   ├── nn_activation.h
   ├── neural_network.h
   ├── main.cpp
-  ├──video/demo.mp4
+  ├──video/Implementación_demo.mp4
   ```
 
 #### 2.2 Manual de uso y casos de prueba
@@ -124,7 +124,7 @@ En este proyecto se implementa un MLP, dado que es la arquitectura más adecuada
 
 ### 3. Ejecución
 
-> **Demo de ejemplo**: Video/demo alojado en `video/demo.mp4`.
+> **Demo de ejemplo**: Video/demo alojado en `video/Implementación_demo.mp4`.
 > Pasos:
 >
 > 1. Explicacion del funcionamiento de la red neuronal.
